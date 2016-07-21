@@ -1,0 +1,132 @@
+<script src="<?=base_url('js/datepicker-zh-TW.js')?>"></script>
+
+  <script>
+  $(function() {
+    $.datepicker.setDefaults( $.datepicker.regional[ "zh-TW" ] );
+    $( "#datepicker" ).datepicker({
+    	dateFormat: "yy-mm-dd",
+    	changeMonth: true,
+    	changeYear: true,
+    	yearRange: "1916:2016",
+    	minDate: new Date(1915, 2 - 1, 1),
+    	maxDate: 0,
+    	showButtonPanel: true,
+    	gotoCurrent: true,
+    	showAnim:"clip"
+    });
+
+
+
+
+  });
+  </script>
+    <?=form_open('register_donor', 'class="register"');?>
+        <h1>註冊捐款人</h1>
+        <fieldset class="row1">
+            <legend>重要欄位</legend>
+            <p>
+                <label>姓名</label>
+                <input type="text"/>
+                <label>性別</label>
+                <select>
+                    <option value="男">男</option>
+                    <option value="女">女</option>
+                </select><!-- 
+                <label>居住地址</label>
+                <input type="text" class="long"/> -->
+            </p>
+
+            <p>
+                <label>身分證字號</label>
+                <input type="text"/>
+                <label>主要聯絡電話</label>
+                <input type="text"/>
+<!--                 <label class="obinfo">* obligatory fields
+                </label> -->
+            </p>
+            <p>
+                <label>居住地址</label>
+                <input type="text" class="long" style="width:500px"/>
+            </p>
+        </fieldset>
+        <fieldset class="row2">
+            <legend>其他資訊</legend>
+            <p>
+                <label>收據抬頭</label>
+                <input type="text" class="long"/>
+            </p>
+            <p>
+                <label>收據地址</label>
+                <input type="text" class="long"/>
+            </p>
+            <p>
+                <label>電話2</label>
+                <input type="text" maxlength="10"/>
+            </p>
+            <p>
+                <label>電話3</label>
+                <input type="text" maxlength="10"/>
+            </p>
+            <p>
+                <label>生日</label>
+                <input type="text" class="long" id="datepicker" size="30" placeholder="YYYY-MM-DD"/>
+            </p>
+            <p>
+                <label>最高學歷</label>
+                <input type="radio" name="Educational_background" value="國中"/>
+                <label class="gender">國中</label>
+                <input type="radio" name="Educational_background" value="高中"/>
+                <label class="gender">高中</label>
+                <input type="radio" name="Educational_background" value="高職"/>
+                <label class="gender">高職</label>
+                <input type="radio" name="Educational_background" value="五專"/>
+                <label class="gender">五專</label>
+                <input type="radio" name="Educational_background" value="大學"/>
+                <label class="gender">大學</label>
+                <input type="radio" name="Educational_background" value="碩士"/>
+                <label class="gender">碩士</label>
+                <input type="radio" name="Educational_background" value="博士"/>
+                <label class="gender">博士</label>
+                <input type="radio" name="Educational_background" value="其他"/>
+                <label class="gender">其他</label>
+            </p>
+            <p>
+                <label>職業</label>
+                <input type="radio" value="軍公教" name="	Occupation" />
+                <label class="gender">軍公教</label>
+                <input type="radio" value="學生" name="	Occupation" />
+                <label class="gender">學生</label>
+                <input type="radio" value="製造" name="	Occupation" />
+                <label class="gender">製造</label>
+                <input type="radio" value="資訊、科技" name="	Occupation" />
+                <label class="gender" style="width:60px">資訊、科技</label>
+                <input type="radio" value="農林漁牧" name="	Occupation" />
+                <label class="gender" style="width:60px">農林漁牧</label>
+                <input type="radio" value="家管" name="	Occupation" />
+                <label class="gender">家管</label>
+                <input type="radio" value="服務業" name="	Occupation" />
+                <label class="gender">服務業</label>
+                <input type="radio" value="退休" name="	Occupation" />
+                <label class="gender">退休</label>
+                <input type="radio" value="其他" name="	Occupation" />
+                <label class="gender">其他</label>
+            </p>
+            <p>
+                <label>從何處得知</label>
+                <input type="radio" value="網路" name="Know_from" />
+                <label class="gender">網路</label>
+                <input type="radio" value="廣播電視" name="Know_from" />
+                <label class="gender" style="width:60px">廣播電視</label>
+                <input type="radio" value="捷運看板" name="Know_from" />
+                <label class="gender" style="width:60px">捷運看板</label>
+                <input type="radio" value="報章雜誌" name="Know_from" />
+                <label class="gender" style="width:60px">報章雜誌</label>
+                <input type="radio" value="本會會訊" name="Know_from" />
+                <label class="gender" style="width:60px">本會會訊</label>
+                <input type="radio" value="活動及DM" name="Know_from" />
+                <label class="gender" style="width:60px">活動及DM</label>
+            </p>
+        </fieldset>
+        
+        <div><button class="button">註冊</button></div>
+    </form>
